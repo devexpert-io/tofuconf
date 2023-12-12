@@ -1,0 +1,23 @@
+---
+import {Image} from "astro:assets"
+interface Props {
+    name: string;
+    position: string;
+    image: string;
+}
+
+const { name, position, image } = Astro.props;
+---
+
+<div class="speaker">
+    <Image src={image} class="logo space-s-bottom" alt="TofuConf logo"/>
+    <h3 class="h300-regular">{name}</h3>
+    <p class="text-base-600">{position}</p>
+</div>
+
+<style>
+    .speaker {
+        flex: 1 1 calc(33.333% - var(--space-m));
+        max-width: 500px;
+    }
+</style>

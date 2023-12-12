@@ -1,0 +1,28 @@
+---
+import Section from "../layouts/Section.astro";
+import Speaker from "./Speaker.astro";
+import speaker from "../images/speaker.png";
+import heart from "../images/heart-3d-emoji.png";
+import { Image } from "astro:assets";
+---
+
+<Section>
+    <h2 class="h200-regular max-width-m"> Con ponentes que te van a dejar <span class="text-brand-secondary-300">muy buen sabor de boca</span></h2>
+
+    <div class="speakers space-l-top">
+        <Speaker name="Antonio Leiva" position="Director de TofuConf" image={speaker} />
+        <Speaker name="Antonio Leiva" position="Director de TofuConf" image={speaker} />
+        <Speaker name="Antonio Leiva" position="Director de TofuConf" image={speaker} />
+        <Speaker name="Antonio Leiva" position="Director de TofuConf" image={speaker} />
+        <Speaker name="Antonio Leiva" position="Director de TofuConf" image={speaker} />
+    </div>
+</Section>
+
+<style>
+    .speakers {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-m);
+        justify-content: center;
+    }
+</style>

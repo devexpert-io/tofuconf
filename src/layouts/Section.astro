@@ -1,0 +1,35 @@
+---
+interface Props {
+    background: string;
+    textColor: string;
+    contentPadding: string;
+}
+
+const {
+    background = "var(--base-000)",
+    textColor = "var(--base-1000)",
+    contentPadding = "var(--space-l)"
+} = Astro.props;
+
+---
+
+<div class="section">
+    <div class="container">
+        <slot/>
+    </div>
+</div>
+
+<style define:vars={{background, textColor, contentPadding}}>
+    .section {
+        background: var(--background);
+        color: var(--textColor);
+    }
+
+    .container {
+        margin: auto;
+        padding: var(--contentPadding);
+        width: 100%;
+        max-width: 1440px;
+        box-sizing: border-box;
+    }
+</style>

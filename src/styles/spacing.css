@@ -1,0 +1,60 @@
+:root{
+    --space-xs: 1rem;
+    --space-s: 2rem;
+    --space-m: 3rem;
+    --space-l: 4rem;
+    --space-xl: 5rem;
+    --space-xxl: 6rem;
+}
+
+.space-xs-top {
+    margin-top: var(--space-xs);
+}
+
+.space-s-top {
+    margin-top: var(--space-s);
+}
+
+.space-m-top {
+    margin-top: var(--space-m);
+}
+
+.space-l-top {
+    margin-top: var(--space-l);
+}
+
+.space-xl-top {
+    margin-top: var(--space-xl);
+}
+
+.space-xxl-top {
+    margin-top: var(--space-xxl);
+}
+
+.space-xs-bottom {
+    margin-bottom: var(--space-xs);
+}
+
+.space-s-bottom {
+    margin-bottom: var(--space-s);
+}
+
+.space-m-bottom {
+    margin-bottom: var(--space-m);
+}
+
+.space-l-bottom {
+    margin-bottom: var(--space-l);
+}
+
+.space-xl-bottom {
+    margin-bottom: var(--space-xl);
+}
+
+.space-xxl-bottom {
+    margin-bottom: var(--space-xxl);
+}
+
+.max-width-m {
+    max-width: 900px;
+}

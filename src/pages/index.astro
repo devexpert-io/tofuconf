@@ -1,0 +1,43 @@
+---
+import Layout from '../layouts/Layout.astro';
+import {Image} from 'astro:assets';
+import logo from '../images/logo.png';
+import '../styles/global.css';
+import Speakers from "../components/Speakers.astro";
+import Section from "../layouts/Section.astro";
+import heart from "../images/heart-3d-emoji.png";
+import Emoji from "../components/Emoji.astro";
+---
+
+<Layout title="TofuConf - Madrid 2023">
+    <header>
+        <Section background="var(--base-800)" textColor="var(--base-000)" contentPadding="var(--space-xxl)">
+            <h1 class="h100-regular space-m-bottom">
+                <Image src={logo} class="logo" alt="TofuConf logo"/>
+                TofuConf
+            </h1>
+            <h2 class="h100-regular space-s-bottom text-base-200">El evento <span class="text-brand-primary-100">#gastrotech</span>
+                donde <span class="text-brand-secondary-300">nadie muere de hambre</span><Emoji src={heart}/></h2>
+            <h3 class="h300-regular">11 de mayo - Madrid</h3>
+        </Section>
+
+    </header>
+    <main>
+        <Speakers/>
+    </main>
+</Layout>
+
+<style>
+    header .logo {
+        width: 8rem;
+        height: auto;
+        margin-right: 1rem;
+    }
+
+    h1 {
+        display: flex;
+        align-items: center;
+    }
+
+
+</style>

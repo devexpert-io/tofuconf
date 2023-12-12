@@ -1,0 +1,43 @@
+@import 'reset.css';
+@import 'colors.css';
+@import 'spacing.css';
+@import 'font-sizes.css';
+
+/*noinspection CssUnknownTarget*/
+@font-face {
+    font-family: 'DevExpert';
+    src: url('/fonts/Roobert-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: 'DevExpert',sans-serif;
+    line-height: 1.6;
+}
+
+code {
+    font-family:
+            Menlo,
+            Monaco,
+            Lucida Console,
+            Liberation Mono,
+            DejaVu Sans Mono,
+            Bitstream Vera Sans Mono,
+            Courier New,
+            monospace;
+}
+
+.elevation-small {
+    box-shadow: 0 4px 16px rgba(19, 14, 30, 0.08);
+}
+
+.elevation-medium {
+    box-shadow: 0 8px 24px rgba(19, 14, 30, 0.08);
+}
+
+.elevation-large {
+    box-shadow: 0 16px 32px rgba(19, 14, 30, 0.08);
+}

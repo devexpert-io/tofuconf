@@ -1,0 +1,74 @@
+:root {
+    --base-000: #ffffff;
+    --base-100: #f0f0f0;
+    --base-200: #C3C3C3;
+    --base-600: #969696;
+    --base-800: #1E1E1E;
+    --base-1000: #000000;
+
+    --brand-primary-100: #FFA9F8;
+    --brand-primary-200: #FFA9F8;
+    --brand-primary-300: #BF8EF3;
+    --brand-primary-400: #A790FA;
+    --brand-primary-500: #8989FF;
+
+    --brand-secondary-100: #98DEFB;
+    --brand-secondary-200: #25CBE1;
+    --brand-secondary-300: #07B1E8;
+    --brand-secondary-400: #019EE0;
+    --brand-secondary-500: #0070F0;
+
+    --brand-tertiary-100: #FEE89A;
+    --brand-tertiary-200: #FFD966;
+    --brand-tertiary-300: #FFB45B;
+    --brand-tertiary-400: #FF8800;
+    --brand-tertiary-500: #F17149;
+
+    --brand-quaternary-100: #A6E22E;
+    --brand-quaternary-200: #61D180;
+    --brand-quaternary-300: #F29A78;
+    --brand-quaternary-400: #FD756C;
+    --brand-quaternary-500: #E95F54;
+
+    --gradient-brand-primary: linear-gradient(180deg, #9999F8 0%, #FFA9F8 100%);
+
+    --support-success: #61D180;
+    --support-error: #FD756C;
+    --support-alert: #FF8800;
+
+    --radius-small: 8px;
+    --radius-medium: 16px;
+    --radius-large: 20px;
+    --radius-full: 2em;
+}
+
+.text-base-000 { color: var(--base-000); }
+.text-base-100 { color: var(--base-100); }
+.text-base-200 { color: var(--base-200); }
+.text-base-600 { color: var(--base-600); }
+.text-base-800 { color: var(--base-800); }
+.text-base-1000 { color: var(--base-1000); }
+
+.text-brand-primary-100 { color: var(--brand-primary-100); }
+.text-brand-primary-200 { color: var(--brand-primary-200); }
+.text-brand-primary-300 { color: var(--brand-primary-300); }
+.text-brand-primary-400 { color: var(--brand-primary-400); }
+.text-brand-primary-500 { color: var(--brand-primary-500); }
+
+.text-brand-secondary-100 { color: var(--brand-secondary-100); }
+.text-brand-secondary-200 { color: var(--brand-secondary-200); }
+.text-brand-secondary-300 { color: var(--brand-secondary-300); }
+.text-brand-secondary-400 { color: var(--brand-secondary-400); }
+.text-brand-secondary-500 { color: var(--brand-secondary-500); }
+
+.text-brand-tertiary-100 { color: var(--brand-tertiary-100); }
+.text-brand-tertiary-200 { color: var(--brand-tertiary-200); }
+.text-brand-tertiary-300 { color: var(--brand-tertiary-300); }
+.text-brand-tertiary-400 { color: var(--brand-tertiary-400); }
+.text-brand-tertiary-500 { color: var(--brand-tertiary-500); }
+
+.text-brand-quaternary-100 { color: var(--brand-quaternary-100); }
+.text-brand-quaternary-200 { color: var(--brand-quaternary-200); }
+.text-brand-quaternary-300 { color: var(--brand-quaternary-300); }
+.text-brand-quaternary-400 { color: var(--brand-quaternary-400); }
+.text-brand-quaternary-500 { color: var(--brand-quaternary-500); }

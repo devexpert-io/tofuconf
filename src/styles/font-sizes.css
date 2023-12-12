@@ -1,0 +1,65 @@
+@media (max-width: 767px) {
+    html{
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+    html{
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1280px) {
+    html{
+        font-size: 20px;
+    }
+}
+
+.h100-regular{
+    font-size: 4rem;
+    line-height: 1em;
+    letter-spacing: -0.03em;
+}
+
+.h200-regular {
+    font-size: 3rem;
+    line-height: 1em;
+    letter-spacing: -0.02em;
+}
+
+.h300-regular {
+    font-size: 2rem;
+    line-height: 1.2em;
+    letter-spacing: -0.02em;
+}
+
+.b100-regular {
+    font-size: 1.4rem;
+    line-height: 1.25em;
+    letter-spacing: -0.02em;
+}
+
+.b200-regular {
+    font-size: 1.15rem;
+    line-height: 1.4em;
+    letter-spacing: -0.02em;
+}
+
+.b300-regular {
+    font-size: 1rem;
+    line-height: 1.2em;
+    letter-spacing: -0.02em;
+}
+
+.c100-regular {
+    font-size: 0.8rem;
+    line-height: 1.45em;
+    letter-spacing: -0.02em;
+}
+
+.c200-regular {
+    font-size: 0.7rem;
+    line-height: 1.4em;
+    letter-spacing: -0.02em;
+}
