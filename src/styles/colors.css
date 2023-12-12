@@ -36,9 +36,9 @@
     --support-error: #FD756C;
     --support-alert: #FF8800;
 
-    --radius-small: 8px;
-    --radius-medium: 16px;
-    --radius-large: 20px;
+    --radius-small: 0.4rem;
+    --radius-medium: 0.8rem;
+    --radius-large: 1rem;
     --radius-full: 2em;
 }
 
