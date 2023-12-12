@@ -1,12 +1,13 @@
 ---
 import Section from "../layouts/Section.astro";
 import Speaker from "./Speaker.astro";
+import Card from "../layouts/Card.astro";
+import Emoji from "./Emoji.astro";
+import {Image} from "astro:assets";
+
 import speaker from "../images/speaker.png";
 import heart from "../images/heart-3d-emoji.png";
 import plus from "../images/plus-3d-emoji.png";
-import {Image} from "astro:assets";
-import Card from "../layouts/Card.astro";
-import Emoji from "./Emoji.astro";
 ---
 
 <Section background="var(--base-100)" id="home">
@@ -16,7 +17,7 @@ import Emoji from "./Emoji.astro";
             <p class="b300-regular">Las mejores charlas donde interseccionan la tecnología con el amor por los animales y el medio ambiente.</p>
         </Card>
         <Card header="Comida 100% vegana" background="var(--brand-quaternary-200)">
-            <p class="b300-regular">Tanto desde la tecnología como desde el plato, demostraremos que podemos vivir en armonía con el resto de seres de este planeta.</p>
+            <p class="b300-regular">Desde la tecnología y desde el plato, demostraremos que podemos vivir en armonía con el resto de seres.</p>
         </Card>
         <Card header="Networking del bueno" background="var(--brand-quaternary-300)">
             <p class="b300-regular">Conocerás a muchas otras personas del sector, embarcadas en el objetivo de construir un mundo mejor a través de la tecnología.</p>

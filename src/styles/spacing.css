@@ -1,6 +1,6 @@
 :root{
     --space-xs: 1rem;
-    --space-s: 2rem;
+    --space-s: 1.5rem;
     --space-m: 3rem;
     --space-l: 4rem;
     --space-xl: 5rem;
@@ -56,5 +56,5 @@
 }
 
 .max-width-m {
-    max-width: 900px;
+    max-width: 960px;
 }
