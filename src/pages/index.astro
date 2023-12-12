@@ -4,13 +4,18 @@ import {Image} from 'astro:assets';
 import logo from '../images/logo.png';
 import '../styles/global.css';
 import Speakers from "../components/Speakers.astro";
+import About from "../components/About.astro";
+import Sponsors from "../components/Sponsors.astro";
 import Section from "../layouts/Section.astro";
+import Schedule from "../components/Schedule.astro";
 import heart from "../images/heart-3d-emoji.png";
 import Emoji from "../components/Emoji.astro";
+import Navigation from "../components/Navigation.astro";
 ---
 
 <Layout title="TofuConf - Madrid 2023">
     <header>
+        <Navigation/>
         <Section background="var(--base-800)" textColor="var(--base-000)" contentPadding="var(--space-xxl)">
             <h1 class="h100-regular space-m-bottom">
                 <Image src={logo} class="logo" alt="TofuConf logo"/>
@@ -23,7 +28,10 @@ import Emoji from "../components/Emoji.astro";
 
     </header>
     <main>
+        <About/>
         <Speakers/>
+        <Sponsors/>
+        <Schedule/>
     </main>
 </Layout>
 

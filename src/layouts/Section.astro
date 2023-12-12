@@ -1,11 +1,13 @@
 ---
 interface Props {
+    id?: string;
     background: string;
     textColor: string;
     contentPadding: string;
 }
 
 const {
+    id,
     background = "var(--base-000)",
     textColor = "var(--base-1000)",
     contentPadding = "var(--space-l)"
@@ -13,7 +15,7 @@ const {
 
 ---
 
-<div class="section">
+<div class="section" id={id || undefined}>
     <div class="container">
         <slot/>
     </div>
