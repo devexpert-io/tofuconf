@@ -1,11 +1,10 @@
 ---
 interface Props {
     header: string;
-    content: string;
     background: string;
 }
 
-const {header, content, background = "var(--base-000)"} = Astro.props;
+const {header, background = "var(--base-000)"} = Astro.props;
 ---
 
 <div class="card">
