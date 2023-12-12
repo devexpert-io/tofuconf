@@ -3,9 +3,49 @@ import Section from "../layouts/Section.astro";
 import Speaker from "./Speaker.astro";
 import speaker from "../images/speaker.png";
 import heart from "../images/heart-3d-emoji.png";
-import { Image } from "astro:assets";
+import {Image} from "astro:assets";
+import Emoji from "./Emoji.astro";
+import devExpertLogo from "../images/devexpert-logo.png";
+import Button from "./Button.astro";
 ---
 
 <Section background="var(--base-100)" id="sponsors">
-    <h2 class="h200-regular max-width-m">¡El tofu corre de su cuenta!</h2>
+    <div class="columns">
+        <div class="column">
+            <h3 class="h300-regular text-brand-tertiary-500">Organiza:</h3>
+            <div class="centered">
+                <Image src={devExpertLogo} alt="Logo DevExpert"/>
+            </div>
+            <h3 class="h300-regular text-brand-tertiary-500 space-s-bottom">¿Quieres apoyar este evento?</h3>
+            <div class="centered">
+                <Button text="¡Contacta con nosotrxs!" link="mailto:contacto@devexpert.io"/>
+            </div>
+        </div>
+        <div class="column">
+            <h2 class="column h200-regular space-m-bottom">¡El tofu corre de su cuenta!
+                <Emoji src={heart}/>
+            </h2>
+            <p class="b100-regular">Gracias a los sponsors, hemos podido organizar este evento y traerte <span
+                    class="text-brand-secondary-500">las mejores charlas</span>. Y, por supuesto, el mejor tofu.
+            </p>
+        </div>
+    </div>
 </Section>
+
+<style>
+    .columns {
+        display: flex;
+    }
+
+    .column {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .column > .centered {
+        align-self: center;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+</style>

@@ -1,5 +1,6 @@
 ---
 import Section from "../layouts/Section.astro";
+import Button from "./Button.astro";
 ---
 <Section background="var(--base-800)" textColor="var(--base-000)" contentPadding="var(--space-xs)">
     <nav>
@@ -8,7 +9,7 @@ import Section from "../layouts/Section.astro";
             <li><a class="option" href="#speakers">Speakers</a></li>
             <li><a class="option" href="#sponsors">Sponsors</a></li>
             <li><a class="option" href="#schedule">Agenda</a></li>
-            <li><a class="button" href="https://google.com">Comprar Entrada</a></li>
+            <li><Button text="Comprar Entrada" link="https://google.com" /></li>
         </ul>
     </nav>
 </Section>
@@ -49,15 +50,5 @@ import Section from "../layouts/Section.astro";
     nav .option:hover {
         color: var(--brand-primary-100);
         text-decoration: underline;
-    }
-
-    nav .button {
-        background-color: var(--brand-tertiary-200);
-        border-radius: var(--radius-medium);
-        color: var(--base-1000);
-    }
-
-    nav .button:hover {
-        background-color: var(--brand-tertiary-400);
     }
 </style>
