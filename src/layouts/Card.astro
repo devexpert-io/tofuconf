@@ -1,0 +1,27 @@
+---
+interface Props {
+    header: string;
+    content: string;
+    background: string;
+}
+
+const {header, content, background = "var(--base-000)"} = Astro.props;
+---
+
+<div class="card">
+    <h3 class="b100-regular space-xs-bottom">{header}</h3>
+    <slot/>
+</div>
+
+<style define:vars={{background}}>
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background: var(--background);
+        width: 280px;
+        height: 280px;
+        padding: var(--space-xs);
+        border-radius: var(--radius-medium);
+    }
+</style>

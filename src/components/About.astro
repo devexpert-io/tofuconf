@@ -3,9 +3,46 @@ import Section from "../layouts/Section.astro";
 import Speaker from "./Speaker.astro";
 import speaker from "../images/speaker.png";
 import heart from "../images/heart-3d-emoji.png";
-import { Image } from "astro:assets";
+import plus from "../images/plus-3d-emoji.png";
+import {Image} from "astro:assets";
+import Card from "../layouts/Card.astro";
+import Emoji from "./Emoji.astro";
 ---
 
 <Section background="var(--base-100)" id="home">
-    <h2 class="h200-regular max-width-m">¿De qué va esto?</h2>
+    <h2 class="h200-regular max-width-m space-m-bottom">¿De qué va esto? <Emoji src={plus}/></h2>
+    <div class="cards max-width-m">
+        <Card header="Charlas Tech y Animales" background="var(--brand-tertiary-200)">
+            <p class="b300-regular">Las mejores charlas donde interseccionan la tecnología con el amor por los animales y el medio ambiente.</p>
+        </Card>
+        <Card header="Comida 100% vegana" background="var(--brand-quaternary-200)">
+            <p class="b300-regular">Tanto desde la tecnología como desde el plato, demostraremos que podemos vivir en armonía con el resto de seres de este planeta.</p>
+        </Card>
+        <Card header="Networking del bueno" background="var(--brand-quaternary-300)">
+            <p class="b300-regular">Conocerás a muchas otras personas del sector, embarcadas en el objetivo de construir un mundo mejor a través de la tecnología.</p>
+        </Card>
+        <Card header="Oportunidades de empleo" background="var(--brand-primary-100)">
+            <p class="b300-regular">Podrás entrar en contacto con empresas que apoyan nuestros valores, y con las que podrás seguir creciendo profesionalmente.</p>
+        </Card>
+        <Card header="Web, Mobile y Calidad de software" background="var(--brand-secondary-200)">
+            <p class="b300-regular">En el futuro, el desarrollo web, móvil y la calidad de software se unen para hacer el mundo mejor.</p>
+        </Card>
+        <p class="b200-regular text">
+            Si quieres formar parte de un evento diferente e innovador, no dudes en unirte.
+        </p>
+    </div>
 </Section>
+
+<style>
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-xs);
+        align-items: end;
+    }
+
+    .text {
+        width: 280px;
+        color: var(--base-600);
+    }
+</style>

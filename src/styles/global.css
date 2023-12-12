@@ -12,6 +12,10 @@
     font-display: swap;
 }
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 html {
     box-sizing: border-box;
     font-family: 'DevExpert',sans-serif;
