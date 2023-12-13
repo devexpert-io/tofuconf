@@ -39,7 +39,7 @@
     --radius-small: 0.4rem;
     --radius-medium: 0.8rem;
     --radius-large: 1rem;
-    --radius-full: 2em;
+    --radius-full: 50%;
 }
 
 .text-base-000 { color: var(--base-000); }
