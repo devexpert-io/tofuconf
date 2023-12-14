@@ -1,0 +1,60 @@
+---
+import Section from "../layouts/Section.astro";
+import Button from "./Button.astro";
+import {Icon} from "astro-icon";
+---
+
+<Section class="section">
+    <div class="rows">
+        <div class="columns">
+            <Icon class="icon" name="ion:mic-outline"/>
+            <div class="text">
+                <h2 class="h200-regular max-width-m space-s-bottom text-brand-quaternary-500">Call for Papers</h2>
+                <p class="b100-regular space-s-bottom">Estamos buscando las mejores charlas que combinen tecnología con
+                    ecología o derechos de los animales</p>
+                <p class="b100-regular">Y, por supuesto, si tienes cualquier otra sugerencia que pienses
+                    que puede ser interesante, ¡no dudes en presentarte!</p>
+            </div>
+        </div>
+        <Button class="button" text="Presenta tu charla" link="https://google.com" newTab="true" color="var(--base-000)"
+                background="var(--brand-quaternary-500)"></Button>
+    </div>
+</Section>
+
+<style>
+    .rows {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: var(--space-m);
+    }
+
+    .columns {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: var(--space-m);
+    }
+
+    .icon {
+        flex: 0 0 12rem;
+        height: 12rem;
+        padding: var(--space-s);
+        border-radius: 50%;
+        border: 8px solid var(--brand-quaternary-500);
+        color: var(--base-800);
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @media (max-width: 767px) {
+        .columns {
+            flex-wrap: wrap;
+        }
+    }
+</style>

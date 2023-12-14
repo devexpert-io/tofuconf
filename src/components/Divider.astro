@@ -1,0 +1,19 @@
+---
+interface Props {
+    height?: string;
+    color?: string;
+}
+
+const {height = '2px', color = 'var(--base-1000)'} = Astro.props;
+---
+
+<div class="divider max-width-m"></div>
+
+<style define:vars={{height, color}}>
+    .divider {
+        width: 100%;
+        margin: 0 auto;
+        height: var(--height);
+        background-color: var(--color);
+    }
+</style>
