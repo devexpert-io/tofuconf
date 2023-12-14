@@ -8,24 +8,25 @@ import Button from "./Button.astro";
 ---
 
 <Section background="var(--base-100)" id="sponsors">
+    <h2 class="column h200-regular space-s-bottom text-brand-primary-500">¡El tofu corre de su cuenta!
+        <Emoji src={heart}/>
+    </h2>
+    <p class="b100-regular space-l-bottom max-width-m">Gracias a la organización y los sponsors, hemos podido organizar este evento y traerte <span
+            class="text-brand-secondary-500">las mejores charlas</span>. Y, por supuesto, el mejor tofu.
+    </p>
     <div class="columns">
         <div class="column">
             <h3 class="h300-regular text-brand-tertiary-500">Organiza:</h3>
-            <div class="centered">
-                <Image src={devExpertLogo} alt="Logo DevExpert"/>
-            </div>
-            <h3 class="h300-regular text-brand-tertiary-500 space-s-bottom">¿Quieres apoyar este evento?</h3>
-            <div class="centered">
-                <Button text="¡Contacta con nosotrxs!" link="mailto:contacto@devexpert.io"/>
+            <div>
+                <Image class="image" src={devExpertLogo} alt="Logo DevExpert"/>
             </div>
         </div>
         <div class="column">
-            <h2 class="column h200-regular space-m-bottom">¡El tofu corre de su cuenta!
-                <Emoji src={heart}/>
-            </h2>
-            <p class="b100-regular">Gracias a los sponsors, hemos podido organizar este evento y traerte <span
-                    class="text-brand-secondary-500">las mejores charlas</span>. Y, por supuesto, el mejor tofu.
-            </p>
+            <h3 class="h300-regular text-brand-tertiary-500 space-s-bottom">Patrocina:</h3>
+            <div>
+                <p class="b100-regular space-m-bottom">Si compartes nuestros valores, ayúdanos a organizar este evento con tu patrocinio</p>
+                <Button text="¡Contacta con nosotrxs!" link="mailto:contacto@devexpert.io"/>
+            </div>
         </div>
     </div>
 </Section>
@@ -33,17 +34,24 @@ import Button from "./Button.astro";
 <style>
     .columns {
         display: flex;
+        flex-wrap: wrap; /* Permite que los elementos se envuelvan en la siguiente línea */
+        gap: 0 var(--space-xl);
     }
 
-    .column {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
+    .column:first-child {
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: auto; /* La primera columna ocupa solo el espacio que necesita */
     }
 
-    .column > .centered {
-        align-self: center;
-        margin-top: auto;
-        margin-bottom: auto;
+    .column:last-child {
+        flex-grow: 1; /* La segunda columna ocupa el resto del espacio */
+        flex-shrink: 1;
+        flex-basis: 500px; /* Establece un ancho mínimo para la segunda columna */
+        min-width: 500px; /* Asegura que no se reduzca por debajo de 500px */
+    }
+    .image {
+        width: 15rem;
+        height: auto;
     }
 </style>
