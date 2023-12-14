@@ -10,7 +10,7 @@ interface Props {
 const {text, link, newTab = false, color = "var(--base-1000)", background = "var(--brand-tertiary-200)"} = Astro.props;
 ---
 
-<a class="button b200-regular" href={link} target="{newTab ? '_blank' : '_self'}" >{text}</a>
+<a class="button b200-regular" href={link} target={newTab ? '_blank' : '_self'} >{text}</a>
 
 <style define:vars={{color, background}}>
     .button {
