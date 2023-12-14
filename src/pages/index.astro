@@ -5,7 +5,6 @@ import logo from '../images/logo.png';
 import '../styles/global.css';
 import Speakers from "../components/Speakers.astro";
 import About from "../components/About.astro";
-import Sponsors from "../components/Sponsors.astro";
 import Section from "../layouts/Section.astro";
 import Schedule from "../components/Schedule.astro";
 import heart from "../images/heart-3d-emoji.png";
@@ -13,19 +12,21 @@ import Emoji from "../components/Emoji.astro";
 import Navigation from "../components/Navigation.astro";
 import C4p from "../components/C4p.astro";
 import Divider from "../components/Divider.astro";
+import Button from "../components/Button.astro";
 ---
 
 <Layout title="TofuConf - Madrid 2024">
     <header>
         <Navigation/>
-        <Section background="linear-gradient(to bottom, var(--base-800) 80px, var(--base-1000) 100%)" textColor="var(--base-000)" contentPadding="var(--space-xxl)">
+        <Section background="linear-gradient(to bottom, var(--base-800) 80px, var(--base-1000) 100%)" textColor="var(--base-000)" contentPadding="var(--space-xl)">
             <h1 class="h100-regular space-m-bottom">
                 <Image src={logo} class="logo" alt="TofuConf logo"/>
                 TofuConf 2024
             </h1>
             <h2 class="h100-regular space-s-bottom text-base-200">El evento <span class="text-brand-primary-100">#gastrotech</span>
                 donde <span class="text-brand-secondary-300">nadie</span> muere de hambre<Emoji src={heart}/></h2>
-            <h3 class="h300-regular">11 de mayo - Madrid</h3>
+            <h3 class="h300-regular space-s-bottom">11 de mayo - Madrid</h3>
+            <Button text="Consigue tu entrada" link="https://google.com" newTab={true} large={true}/>
         </Section>
 
     </header>
@@ -34,7 +35,6 @@ import Divider from "../components/Divider.astro";
         <Speakers/>
         <Divider/>
         <C4p/>
-        <Sponsors/>
         <Schedule/>
     </main>
 </Layout>
@@ -48,8 +48,7 @@ import Divider from "../components/Divider.astro";
 
     h1 {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
     }
-
-
 </style>

@@ -11,4 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+    const menuIcon = document.querySelector('.menu-icon');
+    const navItems = document.querySelector('nav ul');
+
+    menuIcon.addEventListener('click', () => {
+        navItems.style.display = navItems.style.display === 'block' ? 'none' : 'block';
+    });
 });

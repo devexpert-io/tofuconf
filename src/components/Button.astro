@@ -5,12 +5,26 @@ interface Props {
     newTab?: boolean;
     color?: string;
     background?: string;
+    large?: boolean;
 }
 
-const {text, link, newTab = false, color = "var(--base-1000)", background = "var(--brand-tertiary-200)"} = Astro.props;
+const {
+    text,
+    link,
+    newTab = false,
+    color = "var(--base-1000)",
+    background = "var(--brand-tertiary-200)",
+    large = false
+} = Astro.props;
 ---
 
-<a class="button b200-regular" href={link} target={newTab ? '_blank' : '_self'} >{text}</a>
+<a
+        class={`button ${large ? 'h300-regular' : 'b200-regular'}`}
+        style={{padding: large ? '1rem 2rem' : '0.5rem 1rem'}}
+        href={link}
+        target={newTab ? '_blank' : '_self'}>
+    {text}
+</a>
 
 <style define:vars={{color, background}}>
     .button {
@@ -18,9 +32,9 @@ const {text, link, newTab = false, color = "var(--base-1000)", background = "var
         border-radius: var(--radius-medium);
         color: var(--color);
         display: inline-block;
-        padding: 0.5rem 1rem;
         text-decoration: none;
         transition: filter 0.3s;
+        text-align: center;
     }
 
     .button:hover {

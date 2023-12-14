@@ -1,10 +1,12 @@
 ---
 import Section from "../layouts/Section.astro";
 import Button from "./Button.astro";
+import {Icon} from "astro-icon";
 ---
 <Section background="var(--base-800)" textColor="var(--base-000)" contentPadding="var(--space-xs)">
     <nav>
-        <ul class="">
+        <div class="menu-icon"><Icon class="icon" name="mdi:menu"/></div>
+        <ul>
             <li><a class="option" href="#home">La Tofu</a></li>
             <li><a class="option" href="#speakers">Speakers</a></li>
             <li><a class="option" href="#sponsors">Sponsors</a></li>
@@ -50,5 +52,38 @@ import Button from "./Button.astro";
     nav .option:hover {
         color: var(--brand-tertiary-200);
         text-decoration: underline;
+    }
+
+    .menu-icon {
+        display: none;
+        padding: 1rem;
+        width: auto;
+    }
+
+    .icon {
+        color: var(--base-000);
+        width: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+        nav ul {
+            flex-direction: column;
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: var(--base-800);
+        }
+
+        nav li {
+            text-align: center;
+            padding: 0.5rem 0;
+        }
+
+        .menu-icon {
+            display: inline-block;
+            cursor: pointer;
+        }
     }
 </style>
