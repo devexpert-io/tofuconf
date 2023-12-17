@@ -1,7 +1,71 @@
 ---
 import Section from "../layouts/Section.astro";
+import schedule from "../scripts/schedule.js";
 ---
 
 <Section id="schedule">
-    <h2 class="h200-regular max-width-m">La agenda más Plant-Based</h2>
+    <h2 class="h200-regular max-width-m space-m-bottom">La agenda más Plant-Based</h2>
+    <table class="agenda">
+        <thead>
+        <tr>
+            <th>Hora</th>
+            <th>Charla</th>
+        </tr>
+        </thead>
+        <tbody>
+        {schedule.map((item) => (
+                <tr class={item.isSpecial ? 'special' : ''}>
+                    <td>{item.time}</td>
+                    <td>{item.title}</td>
+                </tr>
+        ))}
+        </tbody>
+    </table>
 </Section>
+
+<style>
+    .agenda {
+        max-width: 800px;
+        margin: auto;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-collapse: collapse;
+        width: 100%;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .agenda thead {
+        background-color: var(--base-800);
+        color: white;
+    }
+
+    .agenda th,
+    .agenda td {
+        padding: 12px 16px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .agenda th {
+        font-size: 1.1em;
+    }
+
+    .agenda td {
+        font-size: 1em;
+    }
+
+    .agenda .special {
+        background-color: var(--base-100);
+    }
+
+    .agenda tr:last-child td {
+        border-bottom: none;
+    }
+
+    @media (max-width: 600px) {
+        .agenda th,
+        .agenda td {
+            padding: 8px;
+        }
+    }
+</style>
