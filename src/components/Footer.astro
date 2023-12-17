@@ -5,11 +5,12 @@ import {Image} from "astro:assets";
 import logo from "../images/logo.png";
 import devexpertLogo from "../images/devexpert-logo.png";
 import {Icon} from "astro-icon";
+import {ticketsUrl} from "../scripts/global";
 ---
 
 <Section background="var(--base-800)" textColor="var(--base-000)" contentPadding="var(--space-m)">
     <div class="column">
-        <Button text="Vente al evento" link="https://google.com" newTab={true} large={true}/>
+        <Button text="Vente al evento" link={ticketsUrl} newTab={true} large={true}/>
         <div class="logo-container space-s-top space-s-bottom">
             <Image src={logo} class="logo" alt="TofuConf logo"/>
             <p class="b100-regular">TofuConf 2024</p>

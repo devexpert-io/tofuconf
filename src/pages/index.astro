@@ -15,6 +15,7 @@ import Divider from "../components/Divider.astro";
 import Button from "../components/Button.astro";
 import Sponsors from "../components/Sponsors.astro";
 import Footer from "../components/Footer.astro";
+import {ticketsUrl} from "../scripts/global";
 ---
 
 <Layout title="TofuConf - Madrid 2024">
@@ -28,7 +29,7 @@ import Footer from "../components/Footer.astro";
             <h2 class="h100-regular space-s-bottom text-base-200">El evento <span class="text-brand-primary-100">#gastrotech</span>
                 donde <span class="text-brand-secondary-300">nadie</span> muere de hambre<Emoji src={heart}/></h2>
             <h3 class="h300-regular space-s-bottom">11 de mayo - Madrid</h3>
-            <Button text="Consigue tu entrada" link="https://google.com" newTab={true} large={true}/>
+            <Button text="Consigue tu entrada" link={ticketsUrl} newTab={true} large={true}/>
         </Section>
 
     </header>
