@@ -484,10 +484,10 @@ import Section from "../layouts/Section.astro";
 
         const myParam = urlParams.get('myParam');
 
-        for (i = 0; i < fields.length; i++) {
+        for (let i = 0; i < fields.length; i++) {
             const param = urlParams.get(params[i]);
-            const field = document.getElementsByName(`field[${fields[i]}]`)[0];
-            if (field) {
+            const field = document.getElementsByName(`field[${fields[i]}]`)[0] as HTMLInputElement;
+            if (field && param !== null) {
                 field.value = param;
             }
         }
