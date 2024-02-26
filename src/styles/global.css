@@ -45,3 +45,19 @@ code {
 .elevation-large {
     box-shadow: 0 16px 32px rgba(19, 14, 30, 0.08);
 }
+
+.button {
+    background-color: var(--base-000);
+    border-radius: 100px;
+    color: var(--base-1000);
+    display: inline-block;
+    text-decoration: none;
+    transition: filter 0.3s;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    border: 0;
+}
+
+.button:hover {
+    filter: brightness(85%);
+}

@@ -64,6 +64,10 @@
     margin-bottom: var(--space-xxl);
 }
 
+.max-width-s {
+    max-width: 600px;
+}
+
 .max-width-m {
     max-width: 960px;
 }

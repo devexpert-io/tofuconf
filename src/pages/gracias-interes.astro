@@ -1,0 +1,25 @@
+---
+import '../styles/global.css';
+import Layout from "../layouts/Layout.astro";
+import Navigation from "../components/Navigation.astro";
+import Section from "../layouts/Section.astro";
+import Footer from "../components/Footer.astro";
+import Emoji from "../components/Emoji.astro";
+import heart from "../images/heart-3d-emoji.png";
+---
+<Layout title="TofuConf - Madrid 2024">
+    <header>
+        <Navigation/>
+    </header>
+    <main>
+        <Section>
+            <h1 class="h100-regular space-xxl-top space-l-bottom">¡Gracias por tu interés! <Emoji src={heart}/> </h1>
+            <p class="b100-regular space-s-bottom">En breve recibirás un correo de confirmación.</p>
+            <p class="b100-regular space-s-bottom">Es muy importante que confirmes ese correo para poder seguir comunicándonos contigo.</p>
+            <p class="b100-regular space-xxl-bottom">Búscalo en tu bandeja de entrada y en el Spam.</p>
+        </Section>
+    </main>
+    <footer>
+        <Footer/>
+    </footer>
+</Layout>

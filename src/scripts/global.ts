@@ -1,1 +1,1 @@
-export const ticketsUrl = 'https://devexpert.io';
+export const ticketsUrl = '#form';
