@@ -1,16 +1,20 @@
 ---
 import Section from "../layouts/Section.astro";
 import Speaker from "./Speaker.astro";
-import logo from "../images/logo.png";
+import speakers from "../scripts/speakers.ts";
 ---
 
 <Section id="speakers">
-    <h2 class="h200-regular max-width-m"> Con ponentes que te van a dejar <span class="text-brand-secondary-300">muy buen sabor de boca</span></h2>
+    <h2 class="h200-regular max-width-m">
+        Con ponentes que te van a dejar <span class="text-brand-secondary-300">muy buen sabor de boca</span>
+    </h2>
 
     <div class="speakers space-l-top">
-        <Speaker name="TBD" position="Cerrando ponentes" image={logo} />
-        <Speaker name="TBD" position="Cerrando ponentes" image={logo} />
-        <Speaker name="TBD" position="Cerrando ponentes" image={logo} />
+        {
+            speakers.map(speaker => (
+                    <Speaker name={speaker.name} position={speaker.position} image={speaker.image}/>
+            ))
+        }
     </div>
 </Section>
 
