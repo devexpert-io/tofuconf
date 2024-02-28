@@ -5,6 +5,7 @@ import Emoji from "./Emoji.astro";
 
 import plus from "../images/plus-3d-emoji.png";
 import Metric from "./Metric.astro";
+import Form from "./Form.astro";
 ---
 
 <Section background="var(--base-1000)" textColor="var(--base-100)" contentPadding="var(--space-m)">
@@ -15,6 +16,7 @@ import Metric from "./Metric.astro";
         <Metric number={1} text="Track" ringColor="var(--brand-primary-200)" />
     </div>
 </Section>
+<Form/>
 <Section background="var(--base-100)" id="home">
     <h2 class="h200-regular max-width-m space-m-bottom">¿De qué va esto? <Emoji src={plus}/></h2>
     <div class="cards max-width-m">
