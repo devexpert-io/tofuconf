@@ -1,6 +1,9 @@
 import angeles from '../images/angeles-vazquez.jpeg';
 import elena from '../images/elena-guidi.jpeg';
 import carlos from '../images/carlos-azaustre.png';
+import carmen from '../images/carmen-ansio.jpeg';
+import silvia from '../images/silvia-espana.jpeg';
+import antonio from '../images/antonio-leiva.jpg';
 import logo from '../images/logo.png';
 import type {ImageMetadata} from "astro";
 
@@ -23,8 +26,23 @@ const speakers: Speaker[] = [
     },
     {
         name: 'Carlos Azaustre',
-        position: 'Creador de Contenido y Profesor',
+        position: 'Creador de Contenido y Formador',
         image: carlos,
+    },
+    {
+        name: 'Carmen Ansio',
+        position: 'Freelance UX Engineer',
+        image: carmen,
+    },
+    {
+        name: 'Silvia España',
+        position: 'iOS Developer @ WeFox',
+        image: silvia,
+    },
+    {
+        name: 'Antonio Leiva',
+        position: 'CEO y Formador @ DevExpert',
+        image: antonio,
     },
     {
         name: 'TBD',
