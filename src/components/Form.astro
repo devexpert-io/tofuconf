@@ -2,9 +2,9 @@
 import Section from "../layouts/Section.astro";
 ---
 <Section background="var(--base-000)" id="form">
-    <h2 class="h200-regular max-width-m space-m-bottom">Te avisamos en cuanto las entradas estén disponibles</h2>
+    <h2 class="h200-regular max-width-m space-m-bottom">Te avisamos en cuanto las entradas <span style="color:var(--brand-tertiary-400);">estén disponibles</span></h2>
     <p class="b100-regular max-width-m space-s-bottom">Estamos trabajando duro para traerte los mejores ponentes y una experiencia increíble.</p>
-    <p class="b200-regular max-width-m space-s-bottom">En las próximas semanas abriremos la opción de adquirir tu entrada. Mientras tanto, puedes apuntarte y te avisaremos de todas las novedades</p>
+    <p class="b200-regular max-width-m space-s-bottom">En las próximas semanas abriremos la opción de adquirir tu entrada. Mientras tanto, puedes apuntarte y <strong>te avisaremos de todas las novedades</strong></p>
     <form method="POST" action="https://devexperto.activehosted.com/proc.php" id="_form_91_" class="_form _form_91 _inline-form  _dark max-width-s" novalidate>
         <input type="hidden" name="u" value="91" />
         <input type="hidden" name="f" value="91" />
@@ -86,7 +86,7 @@ import Section from "../layouts/Section.astro";
                 </div>
             </div>
             <div class="_button-wrapper _full_width" style="display: flex; justify-content: end;">
-                <button id="_form_91_submit" class="_submit button" type="submit">
+                <button id="_form_91_submit" class="_submit button b200-regular space-s-top" type="submit">
                     Infórmame de las novedades
                 </button>
             </div>
