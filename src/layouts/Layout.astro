@@ -1,5 +1,4 @@
 ---
-
 interface Props {
 	title: string;
 }
@@ -23,6 +22,12 @@ const { title } = Astro.props;
 		<meta name="theme-color" content="#141414">
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<!-- Metaetiquetas Open Graph -->
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content="El evento #gastrotech donde nadie muere de hambre" />
+		<meta property="og:image" content="/tofuconf-thumbnail.jpg" />
+		<meta property="og:url" content="https://www.tofuconf.com" />
+		<meta name="twitter:card" content="summary_large_image" />
 	</head>
 	<script>
 		import "../scripts/nav.js";
