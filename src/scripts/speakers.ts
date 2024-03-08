@@ -1,10 +1,11 @@
 import angeles from '../images/angeles-vazquez.jpeg';
 import elena from '../images/elena-guidi.jpeg';
-import carlos from '../images/carlos-azaustre.png';
-import carmen from '../images/carmen-ansio.jpeg';
-import silvia from '../images/silvia-espana.jpeg';
+import carlos from '../images/carlos-azaustre.jpg';
+import carmen from '../images/carmen-ansio.jpg';
+import silvia from '../images/silvia-espana.jpg';
 import manuel from '../images/manuel-lemos.jpeg';
-import nicolas from '../images/nicolas-patarino.jpeg';
+import nicolas from '../images/nicolas-patarino.jpg';
+import paola from '../images/paola-garcia.jpeg';
 import antonio from '../images/antonio-leiva.jpg';
 import logo from '../images/logo.png';
 import type {ImageMetadata} from "astro";
@@ -52,14 +53,14 @@ const speakers: Speaker[] = [
         image: nicolas,
     },
     {
+        name: 'Paola García',
+        position: 'Co-Founder @ StressTech.io',
+        image: paola,
+    },
+    {
         name: 'Antonio Leiva',
         position: 'CEO y Formador @ DevExpert',
         image: antonio,
-    },
-    {
-        name: 'TBD',
-        position: 'Speaker por confirmar',
-        image: logo,
     },
 ];
 
