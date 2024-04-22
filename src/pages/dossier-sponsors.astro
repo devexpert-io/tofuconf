@@ -1,0 +1,32 @@
+---
+import '../styles/global.css';
+import Layout from "../layouts/Layout.astro";
+import Navigation from "../components/Navigation.astro";
+import Section from "../layouts/Section.astro";
+import Footer from "../components/Footer.astro";
+import Emoji from "../components/Emoji.astro";
+import heart from "../images/heart-3d-emoji.png";
+---
+<Layout title="TofuConf - Dossier Sponsors">
+    <header>
+        <Navigation/>
+    </header>
+    <main>
+        <Section>
+            <h1 class="h100-regular space-xxl-top space-l-bottom">Haz posible este evento <Emoji src={heart}/> </h1>
+            <p class="b100-regular space-s-bottom">Si compartes los valores de este evento, estamos deseando que te embarques en esta aventura</p>
+            <p class="b100-regular space-s-bottom">Puedes escribirnos a <a href="mailto:contacto@devexpert.io">contacto@devexpert.io</a></p>
+            <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+                <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+                        src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGAgJtzQms&#x2F;9_5vcFq8deNQ1NSk10V3AA&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+                </iframe>
+            </div>
+            <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGAgJtzQms&#x2F;9_5vcFq8deNQ1NSk10V3AA&#x2F;view?utm_content=DAGAgJtzQms&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">TofuConf Sponsorship</a> de DevExpert
+        </Section>
+    </main>
+    <footer>
+        <Footer/>
+    </footer>
+</Layout>
