@@ -1,1 +1,1 @@
-export const ticketsUrl = '#form';
+export const ticketsUrl = 'https://my.weezevent.com/tofuconf-2024';
