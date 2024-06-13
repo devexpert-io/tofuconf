@@ -2,56 +2,64 @@
 import Section from "../layouts/Section.astro";
 import heart from "../images/heart-3d-emoji.png";
 import {Image} from "astro:assets";
-import Emoji from "./Emoji.astro";
 import devExpertLogo from "../images/devexpert-logo.png";
+import Emoji from "./Emoji.astro";
+import proxyhandsLogo from "../images/sponsor-proxyhands.png";
 import Button from "./Button.astro";
 ---
 
-<Section background="var(--base-100)" id="sponsors">
+<Section background="var(--base-100)">
     <h2 class="column h200-regular space-s-bottom text-brand-primary-500">¡El tofu corre de su cuenta!
         <Emoji src={heart}/>
     </h2>
-    <p class="b100-regular space-l-bottom max-width-m">Gracias a la organización y los sponsors, hemos podido organizar este evento y traerte <span
-            class="text-brand-secondary-500">las mejores charlas</span>. Y, por supuesto, el mejor tofu.
+    <p class="b100-regular space-l-bottom max-width-m">Gracias a la organización y los sponsors, hemos podido organizar
+        este evento y traerte <span class="text-brand-secondary-500">las mejores charlas</span>.
+        Y, por supuesto, el mejor tofu.
     </p>
-    <div class="columns">
-        <div class="column">
-            <h3 class="h300-regular text-brand-tertiary-500">Organiza:</h3>
-            <div>
-                <Image class="image" src={devExpertLogo} alt="Logo DevExpert"/>
-            </div>
-        </div>
-        <div class="column">
-            <h3 class="h300-regular text-brand-tertiary-500 space-s-bottom">Patrocina:</h3>
-            <div>
-                <p class="b100-regular space-m-bottom">Si compartes nuestros valores, ayúdanos a organizar este evento con tu patrocinio</p>
-                <Button text="¡Contacta para saber más!" link="mailto:contacto@devexpert.io"/>
-            </div>
-        </div>
+    <h3 class="h300-regular text-brand-tertiary-500">Platinum</h3>
+    <div class="sponsors">
+        <a href="https://devexpert.io" target="_blank"><Image class="image platinum" src={devExpertLogo} alt="Logo DevExpert"/></a>
+    </div>
+    <!--<h3 class="h300-regular text-brand-tertiary-500 space-s-bottom">Gold</h3>
+    <div class="sponsors">
+        <Image class="image gold" src={devExpertLogo} alt="Logo DevExpert"/>
+        <Image class="image gold" src={devExpertLogo} alt="Logo DevExpert"/>
+        <Image class="image gold" src={devExpertLogo} alt="Logo DevExpert"/>
+    </div>-->
+    <h3 class="h300-regular text-brand-tertiary-500">Silver</h3>
+    <div class="sponsors space-m-bottom">
+        <a href="https://proxyhands.com" target="_blank"><Image class="image silver" src={proxyhandsLogo} alt="Logo ProxyHands"/></a>
+    </div>
+    <div>
+        <p class="b100-regular space-s-bottom">Si compartes nuestros valores, ayúdanos a organizar este evento con
+            tu patrocinio</p>
+        <Button text="¡Contacta para saber más!" link="mailto:contacto@devexpert.io"/>
     </div>
 </Section>
 
 <style>
-    .columns {
+    .sponsors {
         display: flex;
-        flex-wrap: wrap; /* Permite que los elementos se envuelvan en la siguiente línea */
-        gap: 0 var(--space-xl);
+        flex-wrap: nowrap;
+        gap: var(--space-l);
     }
 
-    .column:first-child {
-        flex-grow: 0;
-        flex-shrink: 0;
-        flex-basis: auto; /* La primera columna ocupa solo el espacio que necesita */
-    }
-
-    .column:last-child {
-        flex-grow: 1; /* La segunda columna ocupa el resto del espacio */
-        flex-shrink: 1;
-        flex-basis: 50%; /* Establece un ancho mínimo para la segunda columna */
-        min-width: 50%; /* Asegura que no se reduzca por debajo del 50% del ancho del contenedor */
-    }
-    .image {
-        width: 15rem;
+    .platinum {
+        flex: 1 1 calc(50% - var(--space-m));
+        max-width: 500px;
         height: auto;
     }
+
+    .gold {
+        flex: 1 1 calc(33.333% - var(--space-m));
+        max-width: 350px;
+        height: auto;
+    }
+
+    .silver {
+        flex: 1 1 calc(25% - var(--space-xl));
+        max-width: 250px;
+        height: auto;
+    }
+
 </style>
