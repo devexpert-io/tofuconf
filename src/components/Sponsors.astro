@@ -1,7 +1,7 @@
 ---
 import Section from "../layouts/Section.astro";
 import heart from "../images/heart-3d-emoji.png";
-import {Image} from "astro:assets";
+import { Image } from "astro:assets";
 import devExpertLogo from "../images/devexpert-logo.png";
 import Emoji from "./Emoji.astro";
 import proxyhandsLogo from "../images/sponsor-proxyhands.png";
@@ -40,7 +40,7 @@ import Button from "./Button.astro";
 <style>
     .sponsors {
         display: flex;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         gap: var(--space-l);
     }
 
@@ -48,18 +48,39 @@ import Button from "./Button.astro";
         flex: 1 1 calc(50% - var(--space-m));
         max-width: 500px;
         height: auto;
+        object-fit: contain;
     }
 
     .gold {
         flex: 1 1 calc(33.333% - var(--space-m));
         max-width: 350px;
         height: auto;
+        object-fit: contain;
     }
 
     .silver {
         flex: 1 1 calc(25% - var(--space-xl));
         max-width: 250px;
         height: auto;
+        object-fit: contain;
     }
 
+    @media (max-width: 768px) {
+        .platinum, .gold, .silver {
+            flex: 1 1 100%;
+            max-width: 100%;
+        }
+
+        .platinum {
+            max-width: 100%;
+        }
+
+        .gold {
+            max-width: 100%;
+        }
+
+        .silver {
+            max-width: 100%;
+        }
+    }
 </style>
