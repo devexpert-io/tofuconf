@@ -4,13 +4,14 @@ interface Props {
     background?: string;
     textColor?: string;
     contentPadding?: string;
+    style?: string;
 }
 
 const {
     id,
     background = "var(--base-000)",
     textColor = "var(--base-1000)",
-    contentPadding = "var(--space-l)"
+    contentPadding = "var(--space-l)",
 } = Astro.props;
 
 ---

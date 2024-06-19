@@ -1,0 +1,105 @@
+---
+import speakers from '../../scripts/speakers.ts';
+import type {Speaker} from '../../scripts/speakers.ts';
+import Layout from "../../layouts/Layout.astro";
+import '../../styles/global.css';
+import Navigation from "../../components/Navigation.astro";
+import Section from "../../layouts/Section.astro";
+import {Image} from "astro:assets"
+import {Icon} from "astro-icon";
+import Footer from "../../components/Footer.astro";
+import About from "../../components/About.astro";
+
+// Obtén los parámetros de la URL
+const {slug} = Astro.params;
+
+// Encuentra el speaker correspondiente en los datos
+const speaker: Speaker | undefined = speakers.find((s) => s.name.toLowerCase().replace(/ /g, '-') === slug);
+
+if (!speaker) {
+    throw new Error(`Speaker not found: ${slug}`);
+}
+
+export async function getStaticPaths() {
+    return speakers.map((speaker) => ({
+        params: {slug: speaker.name.toLowerCase().replace(/ /g, '-')},
+    }));
+}
+---
+
+<Layout title={speaker.name}>
+    <header>
+        <Navigation/>
+    </header>
+    <main>
+        <Section contentPadding="var(--space-m)">
+            <div class="speaker-container space-m-top space-m-bottom">
+                <div class="image-and-social">
+                    <Image src={speaker.image} class="logo space-s-bottom" alt={speaker.name}/>
+                    {(speaker.xProfile || speaker.linkedin || speaker.instagram || speaker.youtube || speaker.site) && (
+                            <div class="social">
+                                {speaker.xProfile && <a href={speaker.xProfile} target="_blank"><Icon class="social-icon" name="mdi:twitter" alt="X Profile"/></a>}
+                                {speaker.linkedin && <a href={speaker.linkedin} target="_blank"><Icon class="social-icon" name="mdi:linkedin" alt="LinkedIn link"/></a>}
+                                {speaker.instagram && <a href={speaker.instagram} target="_blank"><Icon class="social-icon" name="mdi:instagram" alt="Instagram link"/></a>}
+                                {speaker.youtube && <a href={speaker.youtube} target="_blank"><Icon class="social-icon" name="mdi:youtube" alt="YouTube link"/></a>}
+                                {speaker.site && <a href={speaker.site} target="_blank"><Icon class="social-icon" name="mdi:web" alt="Website link"/></a>}
+                            </div>
+                    )}
+                </div>
+                <div class="speaker-details">
+                    <p class="h200-regular space-s-bottom">{speaker.talk.title}</p>
+                    <h1 class="h300-regular text-brand-secondary-300"><strong>{speaker.name}</strong></h1>
+                    <p class="b100-regular text-base-600 space-s-bottom">{speaker.position}</p>
+                </div>
+            </div>
+            <div class="talk-description">
+                <pre class="b200-regular">{speaker.talk.description}</pre>
+            </div>
+        </Section>
+        <About/>
+    </main>
+    <footer>
+        <Footer/>
+    </footer>
+</Layout>
+
+<style>
+    .speaker-container {
+        display: flex;
+        gap: var(--space-l);
+    }
+
+    .image-and-social {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        background: var(--base-600);
+        border-radius: 50%;
+        width: 12rem;
+        height: 12rem;
+    }
+
+    .talk-description {
+        padding: var(--space-m);
+        background: var(--base-100);
+        border-radius: var(--radius-medium);
+    }
+
+    pre {
+        white-space: pre-wrap;
+    }
+
+    .social {
+        display: flex;
+        gap: var(--space-xs);
+    }
+
+    .social-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        color: var(--base-800);
+    }
+</style>
