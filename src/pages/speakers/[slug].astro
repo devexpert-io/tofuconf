@@ -1,20 +1,20 @@
 ---
 import speakers from '../../scripts/speakers.ts';
-import type {Speaker} from '../../scripts/speakers.ts';
+import type { Speaker } from '../../scripts/speakers.ts';
 import Layout from "../../layouts/Layout.astro";
 import '../../styles/global.css';
 import Navigation from "../../components/Navigation.astro";
 import Section from "../../layouts/Section.astro";
-import {Image} from "astro:assets"
-import {Icon} from "astro-icon";
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon";
 import Footer from "../../components/Footer.astro";
 import About from "../../components/About.astro";
 
 // Obtén los parámetros de la URL
-const {slug} = Astro.params;
+const { slug } = Astro.params;
 
 // Encuentra el speaker correspondiente en los datos
-const speaker: Speaker | undefined = speakers.find((s) => s.name.toLowerCase().replace(/ /g, '-') === slug);
+const speaker: Speaker | undefined = speakers.find((s) => s.slug === slug);
 
 if (!speaker) {
     throw new Error(`Speaker not found: ${slug}`);
@@ -22,7 +22,7 @@ if (!speaker) {
 
 export async function getStaticPaths() {
     return speakers.map((speaker) => ({
-        params: {slug: speaker.name.toLowerCase().replace(/ /g, '-')},
+        params: { slug: speaker.slug },
     }));
 }
 ---
@@ -83,7 +83,7 @@ export async function getStaticPaths() {
     }
 
     .talk-description {
-        padding: var(--space-m);
+        padding: var(--space-l);
         background: var(--base-100);
         border-radius: var(--radius-medium);
     }

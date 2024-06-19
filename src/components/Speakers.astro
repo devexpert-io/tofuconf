@@ -12,7 +12,7 @@ import speakers from "../scripts/speakers.ts";
     <div class="speakers space-l-top">
         {
             speakers.map(speaker => (
-                    <Speaker name={speaker.name} position={speaker.position} image={speaker.image}/>
+                    <Speaker name={speaker.name} position={speaker.position} image={speaker.image} href={`/speakers/${speaker.slug}`}/>
             ))
         }
     </div>
