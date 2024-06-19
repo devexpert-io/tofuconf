@@ -20,15 +20,19 @@ import Form from "../components/Form.astro";
 <Layout bodyId="home" title="TofuConf - Madrid 2024">
     <header>
         <Navigation/>
-        <Section background="linear-gradient(to bottom, var(--base-800) 80px, var(--base-1000) 100%)" textColor="var(--base-000)" contentPadding="var(--space-xl)">
-            <h1 class="h100-regular space-m-bottom">
+        <Section background="linear-gradient(to bottom, var(--base-800) 80px, var(--base-1000) 100%)"
+                 textColor="var(--base-000)" contentPadding="var(--space-l)">
+            <h1 class="h100-regular space-m-top space-m-bottom">
                 <Image src={logo} class="logo" alt="TofuConf logo"/>
                 TofuConf 2024
             </h1>
             <h2 class="h100-regular space-m-bottom text-base-200">El evento <span class="text-brand-primary-100">#gastrotech</span>
-                donde <span class="text-brand-secondary-300">nadie</span> muere de hambre<Emoji src={heart}/></h2>
+                donde <span class="text-brand-secondary-300">nadie</span> muere de hambre
+                <Emoji src={heart}/>
+            </h2>
             <p class="h300-regular">Sábado, 14 de septiembre de 2024</p>
-            <p class="h300-regular space-m-bottom">10h a 19h, <a href="https://maps.app.goo.gl/UDTHc3r4FsVtWC9L9" target="_blank">Talent Garden - Madrid</a></p>
+            <p class="h300-regular space-m-bottom">10h a 19h, <a href="https://maps.app.goo.gl/UDTHc3r4FsVtWC9L9"
+                                                                 target="_blank">Talent Garden - Madrid</a></p>
             <Button text="Consigue tu entrada" link={ticketsUrl} newTab={true} large={true}/>
         </Section>
 
