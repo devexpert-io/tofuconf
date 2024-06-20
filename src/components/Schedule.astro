@@ -1,6 +1,12 @@
 ---
 import Section from "../layouts/Section.astro";
-import schedule from "../scripts/schedule.js";
+import schedule from "../scripts/schedule.ts";
+import speakers from "../scripts/speakers.ts";
+
+const getSpeakerName = (slug: string) => {
+    const speaker = speakers.find(speaker => speaker.slug === slug);
+    return speaker ? speaker.name : 'Desconocido';
+};
 ---
 
 <Section id="schedule">
@@ -16,7 +22,20 @@ import schedule from "../scripts/schedule.js";
         {schedule.map((item) => (
                 <tr class={item.isSpecial ? 'special' : ''}>
                     <td>{item.time}</td>
-                    <td>{item.title}</td>
+                    <td>
+                        {item.speaker ? (
+                                <a href={`/speakers/${item.speaker}`} class="link">
+                                    <div>
+                                        {item.talk.title}
+                                    </div>
+                                    <div class="speaker-name b300-regular">
+                                        {getSpeakerName(item.speaker)}
+                                    </div>
+                                </a>
+                        ) : (
+                            item.talk.title
+                        )}
+                    </td>
                 </tr>
         ))}
         </tbody>
@@ -51,5 +70,17 @@ import schedule from "../scripts/schedule.js";
 
     .agenda tr:last-child td {
         border-bottom: none;
+    }
+
+    .link {
+        text-decoration: none;
+    }
+
+    .link:hover {
+        text-decoration: underline;
+    }
+
+    .link .speaker-name {
+        color: var(--base-600);
     }
 </style>
