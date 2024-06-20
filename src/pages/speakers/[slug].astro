@@ -1,18 +1,18 @@
 ---
 import speakers from '../../scripts/speakers.ts';
-import type { Speaker } from '../../scripts/speakers.ts';
+import type {Speaker} from '../../scripts/speakers.ts';
 import Layout from "../../layouts/Layout.astro";
 import '../../styles/global.css';
 import Navigation from "../../components/Navigation.astro";
 import Section from "../../layouts/Section.astro";
-import { Image } from "astro:assets";
-import { Icon } from "astro-icon";
+import {Image} from "astro:assets";
+import {Icon} from "astro-icon";
 import Footer from "../../components/Footer.astro";
 import About from "../../components/About.astro";
 import schedule from "../../scripts/schedule";
 
 // Obtén los parámetros de la URL
-const { slug } = Astro.params;
+const {slug} = Astro.params;
 
 // Encuentra el speaker correspondiente en los datos
 const speaker: Speaker | undefined = speakers.find((s) => s.slug === slug);
@@ -25,7 +25,7 @@ const speakerSchedule = schedule.find((item) => item.speaker === slug);
 
 export async function getStaticPaths() {
     return speakers.map((speaker) => ({
-        params: { slug: speaker.slug },
+        params: {slug: speaker.slug},
     }));
 }
 ---
@@ -41,25 +41,38 @@ export async function getStaticPaths() {
                     <Image src={speaker.image} class="logo space-s-bottom" alt={speaker.name}/>
                     {(speaker.xProfile || speaker.linkedin || speaker.instagram || speaker.youtube || speaker.site) && (
                             <div class="social">
-                                {speaker.xProfile && <a href={speaker.xProfile} target="_blank"><Icon class="social-icon" name="mdi:twitter" alt="X Profile"/></a>}
-                                {speaker.linkedin && <a href={speaker.linkedin} target="_blank"><Icon class="social-icon" name="mdi:linkedin" alt="LinkedIn link"/></a>}
-                                {speaker.instagram && <a href={speaker.instagram} target="_blank"><Icon class="social-icon" name="mdi:instagram" alt="Instagram link"/></a>}
-                                {speaker.youtube && <a href={speaker.youtube} target="_blank"><Icon class="social-icon" name="mdi:youtube" alt="YouTube link"/></a>}
-                                {speaker.site && <a href={speaker.site} target="_blank"><Icon class="social-icon" name="mdi:web" alt="Website link"/></a>}
+                                {speaker.xProfile && <a href={speaker.xProfile} target="_blank">
+                                    <Icon class="social-icon" name="mdi:twitter" alt="X Profile"/>
+                                </a>}
+                                {speaker.linkedin && <a href={speaker.linkedin} target="_blank">
+                                    <Icon class="social-icon" name="mdi:linkedin" alt="LinkedIn link"/>
+                                </a>}
+                                {speaker.instagram && <a href={speaker.instagram} target="_blank">
+                                    <Icon class="social-icon" name="mdi:instagram" alt="Instagram link"/>
+                                </a>}
+                                {speaker.youtube && <a href={speaker.youtube} target="_blank">
+                                    <Icon class="social-icon" name="mdi:youtube" alt="YouTube link"/>
+                                </a>}
+                                {speaker.site && <a href={speaker.site} target="_blank">
+                                    <Icon class="social-icon" name="mdi:web" alt="Website link"/>
+                                </a>}
                             </div>
                     )}
                 </div>
                 <div class="speaker-details">
-                    <h2 class="h200-regular space-xs-bottom">{speakerSchedule.talk.title}</h2>
                     {speakerSchedule && (
-                            <p class="b100-regular text-base-600 space-s-bottom">Sáb. 14 de Septiembre - {speakerSchedule.time}</p>
+                            <h2 class="h200-regular space-xs-bottom">{speakerSchedule.talk.title}</h2>
+                            <p class="b100-regular text-base-600 space-s-bottom">Sáb. 14 de Septiembre
+                                - {speakerSchedule.time}</p>
                     )}
                     <h2 class="h300-regular text-brand-secondary-300"><strong>{speaker.name}</strong></h2>
                     <p class="b100-regular text-base-600 space-s-bottom">{speaker.position}</p>
                 </div>
             </div>
             <div class="talk-description">
-                <pre class="b200-regular">{speakerSchedule.talk.description}</pre>
+                {speakerSchedule && (
+                        <pre class="b200-regular">{speakerSchedule.talk.description}</pre>
+                )}
             </div>
         </Section>
         <About/>
