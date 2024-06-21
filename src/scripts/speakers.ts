@@ -47,11 +47,11 @@ const speakers: Speaker[] = [
         name: 'Carlos Azaustre',
         position: 'Creador de Contenido y Formador',
         image: carlos,
-        xProfile: null,
-        linkedin: null,
-        instagram: null,
-        youtube: null,
-        site: null,
+        xProfile: 'https://x.com/carlosazaustre',
+        linkedin: 'https://linkedin.com/in/carlosazaustre',
+        instagram: 'https://instagram.com/carlosazaustre',
+        youtube: 'https://youtube.com/@carlosazaustre',
+        site: 'https://carlosazaustre.es',
         slug: 'carlos-azaustre'
     },
     {

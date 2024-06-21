@@ -88,8 +88,10 @@ Discutiremos los desafíos que enfrentan personas subrepresentadas, como mujeres
     {
         time: '16:15',
         talk: {
-            title: 'TBD',
-            description: 'Esta charla aún no ha sido definida. ¡Estamos trabajando en ello! Tendremos más noticias en los próximos días.'
+            title: 'El autismo es un espectro más grande de lo que crees',
+            description: `Hablamos de la condición del espectro autista. 
+
+Derribando mitos y cómo es más común de lo que creemos.`
         },
         speaker: 'carlos-azaustre'
     },
