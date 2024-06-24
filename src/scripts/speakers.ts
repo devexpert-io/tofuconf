@@ -23,11 +23,11 @@ export interface Speaker {
 const speakers: Speaker[] = [
     {
         name: 'Elena Guidi',
-        position: 'Software Engineer @ SEAT CODE',
+        position: 'Backend developer @ SEAT CODE',
         image: elena,
-        xProfile: null,
-        linkedin: null,
-        instagram: null,
+        xProfile: 'https://twitter.com/elenapandino',
+        linkedin: 'https://www.linkedin.com/in/elena-guidi-2607',
+        instagram: 'https://www.instagram.com/elenaguidi',
         youtube: null,
         site: null,
         slug: 'elena-guidi'

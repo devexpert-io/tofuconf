@@ -20,8 +20,14 @@ const schedule: ScheduleItem[] = [
     {
         time: '10:15',
         talk: {
-            title: 'TBD',
-            description: `Esta charla aún no ha sido definida. ¡Estamos trabajando en ello! Tendremos más noticias en los próximos días.`
+            title: 'Pinceladas de verde: hacia un futuro más sostenible en IT',
+            description: `Esta charla te dará un “manual de supervivencia” para entender todo esto del green computing! 
+
+Vamos a dar unas pinceladas sobre los conceptos principales a conocer.
+
+Desde una visión sobre la situación medioambiental general, hasta la influencia que tiene la tecnología en esto, exploraremos las innovaciones verdes en el sector IT.
+
+Entre otras cosas, veremos cuál es el impacto de nuestro sector, cómo podemos medirlo y cómo contribuir para ir hacia un futuro más sostenible.`
         },
         speaker: 'elena-guidi'
     },
