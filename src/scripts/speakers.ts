@@ -100,10 +100,10 @@ const speakers: Speaker[] = [
     },
     {
         name: 'Paola García',
-        position: 'Co-Founder @ StressTech.io',
+        position: 'CEO @ StressTech.io',
         image: paola,
-        xProfile: null,
-        linkedin: null,
+        xProfile: 'https://x.com/ggarciapaola',
+        linkedin: 'https://www.linkedin.com/in/paolagarcia/',
         instagram: null,
         youtube: null,
         site: null,

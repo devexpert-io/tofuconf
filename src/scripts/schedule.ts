@@ -123,8 +123,15 @@ Con una mezcla de consejos prácticos, tips directos y experiencias personales, 
     {
         time: '18:15',
         talk: {
-            title: 'TBD',
-            description: 'Esta charla aún no ha sido definida. ¡Estamos trabajando en ello! Tendremos más noticias en los próximos días.'
+            title: 'El poder de hacer visible lo invisible: ansiedad, depresión en las aulas, DNA y Neurodivergencia',
+            description: `Durante los últimos años de mi carrera profesional en tech, he estado descifrando aquella tecnologia que permite que lo invisible sea visible. 
+            
+Lo comparto con vosotros en esta charla. 
+
+- Piloto salud mental en las aulas madrileñas con Puerta de Innovación del Ayuntamiento. 
+- Selfdecode ¿hay datos en el ADN que nos predispongan?. 
+- Score de estrés, ansiedad y burnout con Iridis de mi empresa Stresstech.io
+- FAN Acción Neurodivergente Entidad sin Animo de Lucro que estoy cofundando.`
         },
         speaker: 'paola-garcia'
     },
