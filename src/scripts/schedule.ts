@@ -47,7 +47,7 @@ Revisaremos todas las herramientas que tenemos a nuestro alcance como desarrolla
     },
     {
         time: '11:45',
-        talk: {title: 'Coffee Break'},
+        talk: {title: 'Coffee Break, patrocinado por CryptoCafe'},
         isSpecial: true
     },
     {
@@ -103,7 +103,7 @@ Derribando mitos y cómo es más común de lo que creemos.`
     },
     {
         time: '17:00',
-        talk: {title: 'Networking'},
+        talk: {title: 'Coffee Break, patrocinado por CryptoCafe'},
         isSpecial: true
     },
     {
