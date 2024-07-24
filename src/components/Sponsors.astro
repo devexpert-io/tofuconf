@@ -9,6 +9,8 @@ import proxyhandsLogo from "../images/sponsor-proxyhands.png";
 import cryptocafeLogo from "../images/sponsor-cryptocafe.png";
 import worldlineLogo from "../images/sponsor-worldline.png";
 import uemLogo from "../images/sponsor-uem.png";
+import freshGreens from "../images/sponsor-fresh-greens.png";
+import keepCoding from "../images/sponsor-keep-coding.png";
 import Button from "./Button.astro";
 ---
 
@@ -34,6 +36,11 @@ import Button from "./Button.astro";
     <div class="sponsors space-m-bottom">
         <a href="https://proxyhands.com" target="_blank"><Image class="image silver" src={proxyhandsLogo} alt="Logo ProxyHands"/></a>
         <a href="https://cryptocafe.madrid" target="_blank"><Image class="image silver" src={cryptocafeLogo} alt="Logo CryptoCafe"/></a>
+    </div>
+    <h3 class="b100-regular">Media Partners</h3>
+    <div class="sponsors space-xs-top space-m-bottom">
+        <a href="https://keepcoding.io" target="_blank"><Image class="image media" src={keepCoding} alt="Logo KeepCoding"/></a>
+        <a href="https://www.freshgreens.es/" target="_blank"><Image class="image media" src={freshGreens} alt="Logo FreshGreens"/></a>
     </div>
     <div>
         <p class="b100-regular space-s-bottom">Si compartes nuestros valores, ayúdanos a organizar este evento con
@@ -66,6 +73,13 @@ import Button from "./Button.astro";
     .silver {
         flex: 1 1 calc(25% - var(--space-xl));
         max-width: 250px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .media {
+        flex: 1 1 calc(20% - var(--space-m));
+        max-width: 200px;
         height: auto;
         object-fit: contain;
     }
